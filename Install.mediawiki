@@ -1,0 +1,70 @@
+= Install =
+[https://www.pluralsight.com/guides/software-engineering-best-practices/using-git-and-github-on-windows Guide]
+
+== Client ==
+Linux: Git </br>
+Windows: GitBash
+
+== User profile ==
+<pre>
+git config -–global user.name “Firstname Lastname” 
+git config -–global user.email “your_email@example.com”
+</pre>
+
+== Proxy ==
+
+Get proxy using in Chrome (may give you a .pac file instead of name...)
+<pre> 
+chrome://net-internals/#proxy
+</pre>
+
+Set proxy in Git
+<pre> 
+git config –global http.proxy http://<PROXY>:<PROXY-PORT> 
+</pre>
+
+== Authentication ==
+=== Store method===
+
+=== HTTP ===
+Windows <code> git config --global credential.helper wincred </code>
+Save credentials for one month <code> git config --global credential.helper 'cache --timeout=2592000' </code>
+
+=== RSA ===
+==== Generate RSA ====
+</pre>
+ssh-keygen -t rsa -C “your_email@example.com” 
+
+Got: The key fingerprint is: SHA256:(..) your_email@example.com&quot;
+</pre>
+
+Get the public key (not private).
+</pre>
+vi ~/.ssh/id_rsa.pub Got: “ssh-rsa (..) your_email@example.com”
+</pre>
+
+==== Add public key to server ====
+
+Server is GitHub
+
+GitHub: User - Settings / SSH and GPG Keys - New SSH key.  <br/>
+Title : Desktop/Laptop + Work/Home  <br/>
+Key : Enter <code> ssh-rsa (..) your_email@example.com </code>  <br/>
+Click <br/> 
+Enter a title to identify this computer  <br/> 
+In the field Key paste all the contents of the file id_rsa.pub. <br/> 
+=== Store passphrase ===
+==== Windows ====
+https://github.com/sauter-hq/git-guidelines/wiki/Windows-gitbash-save-ssh-passphrase
+
+== init ==
+Overview
+* create repository <code> git init </code>
+* create alias on a remote (= not in current folder of localhost) repository (named "origin" by convention) <code> git remote add origin <REPO_URL> </code>
+* check <code> git remote -v </code>
+* push to remote repository <code> git push origin master> </code>
+
+
+== clone ==
+<code> git clone https://github.com/GradedJestRisk/java-training.git </code>
+Info: Doing so cause the distant server name to be added to ~/.ssh/known_hosts file, with its public key
