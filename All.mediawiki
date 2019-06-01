@@ -1,0 +1,222 @@
+=Manual=
+<code> git <CMD> --help</code>
+
+
+= Common =
+==create repo==
+===.gitattributes===
+[https://git-scm.com/docs/gitattributes doc]
+====attributes====
+4 operations:
+* set with no value : * text
+* unset: * -text
+* set with specific value: * text=auto
+* unspecified: * !text
+
+====header====
+Header (that apply to ALL files) starts by <code> * </code>, eg: <code> * text=auto </code>
+</br>
+Normalization: when a text file is normalized, its line endings are converted to LF in the repository.
+=====text=====
+Control when normalization is triggered.
+Values:
+* set : do not check if file contains text, normalize anyway
+* unset: do not check for text, never normalize (check-in and check-out)
+* auto : check for text on check-in; if this is text, normalize (when the file has been committed with CRLF, no conversion is done ??)
+* unspecified : use user-specific settings instead (core.autocrlf)
+
+=====eol =====
+Control how normalization is applied.
+Values:
+* CRLF: 
+** on check-in: force normalization (convert to LF)
+** on check-out: convert LE to CRLF
+* LF:
+** on check-in: force normalization (convert to LF)
+** on check-out: prevent conversion to CRLF (preserve LF)
+* unspecified (!eol): look at the core.eol config 
+
+[https://stackoverflow.com/questions/21302670/what-does-eol-in-gitattributes-do More on that]
+
+== clone ==
+Clone in specific folder <br>
+<code>git clone git@github.com:whatever FOLDER_NAME</code>
+
+==branch==
+
+==checkout==
+
+===branch===
+===tag===
+<pre>
+git checkout version <TAG_NAME> -b <BRANCH_NAME>
+git checkout tags/version <TAG_NAME> -b <BRANCH_NAME>
+</pre>
+
+
+== stash ==
+Handful:
+* keep changes on stash <code> git stash </code>
+* restore last stashed changes <code> git stash apply </code>
+* get list of all stashed changes <code> git stash list </code>
+* restore specific stashed changes <code> git stash apply <STASH_ID></code>
+* clear the stash <code>git stash clear </code>
+
+==diff==
+Discard end-of-line difference (use it only on Windows) <br/>
+<code>git config --global core.whitespace cr-at-eol</code>
+
+==add==
+Handful:
+* add modified,deleted <code>git add --all </code>
+* add all (new, modified,deleted) <code>git add --all </code>
+* handle hunks separately <code> git add --patch </code>
+
+[https://nuclearsquid.com/writings/git-add/ More on --patch]
+
+== commit ==
+[https://chris.beams.io/posts/git-commit/ Write a comment]
+
+== compare == 
+
+View all modifications on a single file
+<code>git log --follow -- <FILE_NAME></code>
+<br/>
+
+View all modifications made by a commit
+<code>git show <COMMIT_SHA1></code>
+<br/>
+
+Compare 2 branches, ignoring spaces
+<code> git diff --ignore-space-change <BRANCH_1> <BRANCH_2> </code>
+<br/>
+== cleanup ==
+
+Remove remote branches  <br/>
+<code>git fetch -p</code> <br/>
+
+Remove local branches not on remote  <br/>
+<code>git remote prune origin</code> <br/>
+
+== Exclude files ==
+For files you don't want to be handled in git:
+* binary files;
+* temporary files;
+* IDE files.
+
+=== shared (.gitignore) ===
+Create a <code>.gitignore</code> file, at root of the repo, and commit it. <br/>
+Example for all java compiled classes <code>*.class</code><br/>
+<pre>
+*.class
+</pre>
+In you want to exclude some file under a specific folder, that may be anywhere in your repo, prefix this folder with a <code>**/</code><br/>
+<pre>
+**/.idea/workspace.xml
+</pre>
+
+However, if .gitignore has been modified after files appeared in untracked changed, these files won't disappear. <br/>
+Execute this to remove them form untracked changes. <br/>
+<pre>
+git rm -r --cached .
+git add .
+git commit -m "fixed untracked files"
+</pre>
+
+=== local (exclude) ===
+To deal with specific issues (ie: some use Windows,some others Linux), you can use a local file <code>exclude</code> that will filter objects before the shared <code>.gitignore</code> applies. <br>
+It is stored in <code>.git/info/exclude</code>
+==Encoding and other funny things==
+
+===End of line===
+=> to check...
+Git store everything in repository by default using Unix EOL characters : LF. (??)
+<code> core.autocrlf </code> parameter controls this:
+* true: Checkout Windows-style, commit Unix-style;
+* input: Checkout as-is, commit Unix-style (when working in Unix, if by incident a bad file is introduced, it will be normalized);
+* false: Checkout as-is, commit as-is.
+
+For single platforms projects, set false.
+(If platform is Windows, Git will store CRLF in repository).
+
+For cross-platforms projects, use LF in repository, so set:
+* Unix: input (or false if you're lucky); 
+* Windows: true.
+
+true: ensure that 
+* normalize text files when added
+* files that are already normalized in the repository stay normalized.
+
+If not set, default value is applied: false.
+==Config==
+===List===
+Handful:
+* get existing settings file: <code> git config --list --show-origin </code> 
+* show all config values : <code> git config --list --show-origin </code>
+* show all repository-specific values: <code> git config --local --list </code>
+* show specific config value : <code> git config --get <PROPERTY> </code>
+===Set===
+Set config on repository (not global) </br>
+Command-line
+<pre>
+git config user.name “Joe Bloggs”
+git config user.email “jbloggs@alternativedomain.com”
+</pre> 
+Config file (.git/config) </br>
+<pre>
+[user]
+        name  = "Joe Bloggs”
+        email = “jbloggs@alternativedomain.com”
+</pre> 
+
+===Remove===
+<code> git config --global --unset <PROPERTY> </code>
+
+=Misc=
+==Compare repos==
+Steps:
+* add target    <code> git remote add -f b path/to/repo_b.git </code>
+* update target <code> git remote update </code>
+* get diff      <code> git diff master remotes/b/master </code>
+* remove target <code> git remote rm b </code>
+
+
+==Update==
+Windows : <code> git update-git-for-windows </code>
+
+</br>
+Get remote: <code>.git/config</code>
+<pre>
+(..)
+[remote "origin"]
+	url = https://github.com/g0t4/jenkins2-course-spring-boot.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+(..)
+</pre>
+
+Get all repositories (= find all .git folders):
+* Linux: <code> find / -name ".git" </code>
+* Windows (PowerShell) : <code>Get-ChildItem . -Attributes Directory,Directory+Hidden -ErrorAction SilentlyContinue -Include ".git" -Recurse</code>
+
+Show git location in git-bash <code>where git.exe </code>
+
+== Commit template ==
+
+Add template
+<pre>
+echo "Feature - Symptom - Cause " > .gitCommitTemplate
+git config --global commit.template .gitCommitTemplate
+</pre>
+
+Save last commit
+<pre>
+vi .git/hooks/post-commit
+
+#!/bin/sh
+printf "`git log -1 --pretty=%s`" > .gitmessage.txt
+
+chmod +x .git/hooks/post-commit
+</pre>
+
+= GUIs =
+[ https://git-fork.com/ Fork]
