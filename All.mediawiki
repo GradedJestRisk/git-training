@@ -218,5 +218,13 @@ printf "`git log -1 --pretty=%s`" > .gitmessage.txt
 chmod +x .git/hooks/post-commit
 </pre>
 
+Revert already pushed changes (commit opposite chanes, does not remove form history)
+<pre>
+git reset HEAD^ --hard
+git push origin -f
+</pre>
+
+[https://tecadmin.net/delete-commit-history-in-github/ Remove from history  implies remove all history]
+
 = GUIs =
 [ https://git-fork.com/ Fork]
