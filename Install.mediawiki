@@ -68,3 +68,5 @@ Overview
 == clone ==
 <code> git clone https://github.com/GradedJestRisk/java-training.git </code>
 Info: Doing so cause the distant server name to be added to ~/.ssh/known_hosts file, with its public key
+
+If can you got <code> fatal: unable to access 'https://github.com/GradedJestRisk/': SSL certificate problem: self signed certificate in certificate chain </code>, execute <code> git config --global http.sslVerify false </code>
