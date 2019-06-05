@@ -218,6 +218,7 @@ printf "`git log -1 --pretty=%s`" > .gitmessage.txt
 chmod +x .git/hooks/post-commit
 </pre>
 
+== Revert ==
 Revert already pushed changes (commit opposite chanes, does not remove form history)
 <pre>
 git reset HEAD^ --hard
