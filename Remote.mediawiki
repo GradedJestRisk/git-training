@@ -4,4 +4,6 @@
 git remote add origin <>
 # Verify 
 git remote -v
+# Set as origin
+git push --set-upstream origin master
 </pre> 
