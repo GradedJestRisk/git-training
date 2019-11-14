@@ -53,9 +53,18 @@ Key : Enter <code> ssh-rsa (..) your_email@example.com </code>  <br/>
 Click <br/> 
 Enter a title to identify this computer  <br/> 
 In the field Key paste all the contents of the file id_rsa.pub. <br/> 
+
 === Store passphrase ===
+
 ==== Windows ====
 https://github.com/sauter-hq/git-guidelines/wiki/Windows-gitbash-save-ssh-passphrase
+
+==== Linux ====
+Overview:
+* start (if not working): <code> eval `ssh-agent` </code>
+* list all accessible keys (.ssh) : <code> ssh-add -l </code>
+* add a key : <code> ssh-add </code>
+
 
 == init ==
 Overview
