@@ -1,0 +1,5 @@
+List:
+* checkout: <code> gco </code>
+* show tree : <code> git log --graph --all --decorate --oneline </code>
+* show last change (verbose): <code> git show --stat </code>
+* : <code> </code>
