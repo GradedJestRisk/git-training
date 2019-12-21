@@ -1,1 +1,10 @@
-[https://ardalis.com/syncing-a-fork-of-a-github-repository-with-upstream  Synchronise fork]
+= Synchronise fork =
+[https://ardalis.com/syncing-a-fork-of-a-github-repository-with-upstream  From here ]
+
+Upstream = source repository, the one that has been forked
+
+Steps:
+* add upstream (once): <code> git remote add upstream <GIT-URL> </code>
+* fetch update : <code> git fetch upstream </code>
+* move to master : <code> git checkout master</code>
+* merge : <code> git merge upstream/master</code>
