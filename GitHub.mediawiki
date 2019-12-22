@@ -1,3 +1,7 @@
+= Shortcuts =
+[https://help.github.com/en/github/getting-started-with-github/keyboard-shortcuts Here]
+
+
 = Synchronise fork =
 [https://ardalis.com/syncing-a-fork-of-a-github-repository-with-upstream  From here ]
 
