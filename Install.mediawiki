@@ -1,9 +1,9 @@
-= Install =
-[https://www.pluralsight.com/guides/software-engineering-best-practices/using-git-and-github-on-windows Guide]
+= Client =
+Install client:
+* Linux: Git 
+* Windows: GitBash
 
-== Client ==
-Linux: Git </br>
-Windows: GitBash
+= Setup =
 
 == User profile ==
 <pre>
@@ -24,13 +24,13 @@ git config –global http.proxy http://<PROXY>:<PROXY-PORT>
 </pre>
 
 == Authentication ==
-=== Store method===
 
 === HTTP ===
 Windows <code> git config --global credential.helper wincred </code>
 Save credentials for one month <code> git config --global credential.helper 'cache --timeout=2592000' </code>
 
 === RSA ===
+
 ==== Generate RSA ====
 </pre>
 ssh-keygen -t rsa -C “your_email@example.com” 
@@ -54,7 +54,7 @@ Click <br/>
 Enter a title to identify this computer  <br/> 
 In the field Key paste all the contents of the file id_rsa.pub. <br/> 
 
-=== Store passphrase ===
+==== Store passphrase ====
 
 ==== Windows ====
 https://github.com/sauter-hq/git-guidelines/wiki/Windows-gitbash-save-ssh-passphrase
