@@ -1,0 +1,8 @@
+= Common scenarios =
+
+== Overwrite local changes (with remote changes) ==
+
+=== Local are already committed, but not pushed ===
+Steps:
+* get remote changes: <code>git fetch --all</code>
+* overwrite local with remote: <code>git reset --hard origin/master </code>
