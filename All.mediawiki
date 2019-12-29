@@ -226,6 +226,3 @@ git push origin -f
 </pre>
 
 [https://tecadmin.net/delete-commit-history-in-github/ Remove from history  implies remove all history]
-
-= GUIs =
-[ https://git-fork.com/ Fork]
