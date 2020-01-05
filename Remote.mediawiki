@@ -1,9 +1,8 @@
+=List=
+<code> git remote -v </code>
+
 =Add=
-<pre>
-# Add
-git remote add origin <>
-# Verify 
-git remote -v
-# Set as origin
-git push --set-upstream origin master
-</pre> 
+<code> git remote add origin <URL> </code>
+
+=Change URL=
+<code> git remote set-url origin <URL> </code>
