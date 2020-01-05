@@ -1,0 +1,7 @@
+= General= 
+Branches:
+* in production: <code>master</code>
+* under development: <code>develop</code>
+
+= GitFlow =
+[https://nvie.com/posts/a-successful-git-branching-model/ Original post]
