@@ -1,0 +1,4 @@
+Welcome to the git-training wiki!
+
+= Repositories naming convention =
+As [https://en.wikipedia.org/wiki/Letter_case#Special_case_styles <code>kebab-case</code>] is used for web (URL, HTML and CSS class and ids), let's use this, as github projects are referenced to by URLs.
