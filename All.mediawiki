@@ -123,9 +123,19 @@ git add .
 git commit -m "fixed untracked files"
 </pre>
 
-=== local (exclude) ===
-To deal with specific issues (ie: some use Windows,some others Linux), you can use a local file <code>exclude</code> that will filter objects before the shared <code>.gitignore</code> applies. <br>
+=== local ===
+To deal with specific issues (ie: some use Windows, some others Linux)
+
+==== this repository (exclude) =====
+Update the repo-based local file <code>exclude</code>: it will filter objects before the shared <code>.gitignore</code> applies. <br>
 It is stored in <code>.git/info/exclude</code>
+
+==== all repositories (~/.gitignore) ====
+<pre>
+touch ~/.gitignore
+git config --global core.excludesfile '~/.gitignore'
+<pre>
+
 ==Encoding and other funny things==
 
 ===End of line===
