@@ -75,7 +75,13 @@ Handful:
 [https://nuclearsquid.com/writings/git-add/ More on --patch]
 
 == commit ==
-[https://chris.beams.io/posts/git-commit/ Write a comment]
+List:
+* [https://chris.beams.io/posts/git-commit/ Write a comment]
+* you forgot something
+** and not pushed
+*** just a line: <code> git commit --amend </code>
+*** changed many things, change the commit message <code> git commit --amend --no-edit </code>
+** and already pushed : <code>git push --force origin <BRANCH></code>
 
 == compare == 
 
