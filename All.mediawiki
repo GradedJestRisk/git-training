@@ -55,12 +55,19 @@ git checkout tags/version <TAG_NAME> -b <BRANCH_NAME>
 
 
 == stash ==
+Manage uncommited changes when switching branches. 
+
 Handful:
-* keep changes on stash <code> git stash </code>
-* restore last stashed changes <code> git stash apply </code>
-* get list of all stashed changes <code> git stash list </code>
+* push changes to stash <code> git stash push </code>
+* list stashed changes <code> git stash list </code>
+* pop changes from stash <code> git stash pop </code>
+
+Specifics
 * restore specific stashed changes <code> git stash apply <STASH_ID></code>
 * clear the stash <code>git stash clear </code>
+
+Stash file section (aka hunks, parts of patches):
+* <code> git stash push --patch (-p)</code> 
 
 ==diff==
 Discard end-of-line difference (use it only on Windows) <br/>
