@@ -119,10 +119,12 @@ For files you don't want to be handled in git:
 
 === shared (.gitignore) ===
 Create a <code>.gitignore</code> file, at root of the repo, and commit it. <br/>
+
 Example for all java compiled classes <code>*.class</code><br/>
 <pre>
 *.class
 </pre>
+
 In you want to exclude some file under a specific folder, that may be anywhere in your repo, prefix this folder with a <code>**/</code><br/>
 <pre>
 **/.idea/workspace.xml
@@ -144,10 +146,14 @@ Update the repo-based local file <code>exclude</code>: it will filter objects be
 It is stored in <code>.git/info/exclude</code>
 
 ==== all repositories (~/.gitignore) ====
+Setup
 <pre>
 touch ~/.gitignore
 git config --global core.excludesfile '~/.gitignore'
 </pre>
+
+Remove
+<code>git config --global --unset core.excludesfile</code>
 
 ==Encoding and other funny things==
 
