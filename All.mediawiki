@@ -147,7 +147,7 @@ It is stored in <code>.git/info/exclude</code>
 <pre>
 touch ~/.gitignore
 git config --global core.excludesfile '~/.gitignore'
-<pre>
+</pre>
 
 ==Encoding and other funny things==
 
