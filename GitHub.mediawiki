@@ -9,7 +9,17 @@ List:
 = Create repo =
 Use these settings if collaborating:
 * disable push on master
-* require signed commits
+* require PR
+
+= Security =
+[https://security.stackexchange.com/questions/120706/why-would-i-sign-my-git-commits-with-a-gpg-key-when-i-already-use-an-ssh-key-to From SO]
+<blockquote>
+When you authenticate to Github with your SSH key, that authentication doesn't become part of the repository in any meaningful or lasting way. It causes Github to give you access for the moment, but it doesn't prove anything to anyone who is not Github.
+</blockquote> 
+
+If additional security is needed, use GPG:
+* setup [https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work GPG] on your machine
+* on repository settings, enable "require signed commits"
 
 = Synchronise fork =
 [https://ardalis.com/syncing-a-fork-of-a-github-repository-with-upstream  From here ]
