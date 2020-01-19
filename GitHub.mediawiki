@@ -2,10 +2,14 @@
 [https://help.github.com/en/github/getting-started-with-github/keyboard-shortcuts Here]
 
 = General =
-
 List:
 * [https://gist.github.com/piscisaureus/3342247 checkout PR branch]
-* clone wiki <code>git clone git@github.com:<USER_NAME>/<REPO_NAME>.wiki.git
+* clone wiki <code>git clone git@github.com:<USER_NAME>/<REPO_NAME>.wiki.git</code>
+
+= Create repo =
+Use these settings if collaborating:
+* disable push on master
+* require signed commits
 
 = Synchronise fork =
 [https://ardalis.com/syncing-a-fork-of-a-github-repository-with-upstream  From here ]
