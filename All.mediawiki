@@ -8,6 +8,7 @@ List:
 ** between current and a branch  <code>? </code>
 ** between 2 branches  <code>git diff <BRANCH_1> <BRANCH_2> </code>
 * commit
+** without test (disable pre-commit hook) <code>git commit --no-verify </code>
 ** change last commit <code>git commit --amend </code>
 * push
 ** without test (disable pre-push hook) <code>git push --no-verify </code>
