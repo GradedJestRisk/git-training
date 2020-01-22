@@ -1,23 +1,39 @@
-=Manual=
+= Manual =
 <code> git <CMD> --help</code>
+
+= Training =
+List:
+* show changes 
+** since last commit <code>git diff</code>
+** between current and a branch  <code>? </code>
+** between 2 branches  <code>git diff <BRANCH_1> <BRANCH_2> </code>
+* commit
+** change last commit <code>git commit --amend </code>
+* push
+** without test <code>git push --no-verify </code>
+** without test <code>git push --with-lease </code>
+
+
 
 
 = Common =
-==create repo==
-===.gitattributes===
+
+== create repo ==
+=== .gitattributes ===
 [https://git-scm.com/docs/gitattributes doc]
-====attributes====commit opposite chanes
+==== attributes ====
 4 operations:
 * set with no value : * text
 * unset: * -text
 * set with specific value: * text=auto
 * unspecified: * !text
 
-====header====
+==== header ====
 Header (that apply to ALL files) starts by <code> * </code>, eg: <code> * text=auto </code>
 </br>
 Normalization: when a text file is normalized, its line endings are converted to LF in the repository.
-=====text=====
+
+===== text =====
 Control when normalization is triggered.
 Values:
 * set : do not check if file contains text, normalize anyway
@@ -25,7 +41,7 @@ Values:
 * auto : check for text on check-in; if this is text, normalize (when the file has been committed with CRLF, no conversion is done ??)
 * unspecified : use user-specific settings instead (core.autocrlf)
 
-=====eol =====
+===== eol =====
 Control how normalization is applied.
 Values:
 * CRLF: 
