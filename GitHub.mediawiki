@@ -31,3 +31,15 @@ Steps:
 * fetch update : <code> git fetch upstream </code>
 * move to master : <code> git checkout master</code>
 * merge : <code> git merge upstream/master</code>
+
+= Manage several repo with several identities =
+List:
+* - update each repo <code> .git/config </code> to include your username in URL in origin url <code> url = git@github.com-GradedJestRisk:GradedJestRisk/git-training </code>
+* - modify <code>/.ssh/config </code>
+<pre>
+Host github.com-GradedJestRisk
+    Hostname github.com
+    IdentityFile <PATH_TO_FILE>
+    User git
+    IdentitiesOnly yes
+</pre>
