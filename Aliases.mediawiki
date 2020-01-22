@@ -1,5 +1,9 @@
 List:
-* checkout: <code> gco </code>
-* show tree : <code> git log --graph --all --decorate --oneline </code>
-* show last change (verbose): <code> git show --stat </code>
+* fetch (all): gfa <code> git fetch --all --prune </code>
+* show tree : glola <code> git log --graph --all --decorate --oneline </code>
+* checkout master: gcm <code> git checkout master </code>
+* push a new branch: gpsup <code>git push --set-upstream origin $(git_current_branch) </code>
+* push force with lease: gpf <code> git push --force-with-lease</code>
 * : <code> </code>
+
+
