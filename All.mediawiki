@@ -10,8 +10,8 @@ List:
 * commit
 ** change last commit <code>git commit --amend </code>
 * push
-** without test <code>git push --no-verify </code>
-** without test <code>git push --with-lease </code>
+** without test (disable pre-push hook) <code>git push --no-verify </code>
+** after rebase <code>git push --force--with-lease </code> (preventing someone else'change to be overwritten)
 
 
 
