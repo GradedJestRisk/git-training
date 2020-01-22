@@ -6,6 +6,9 @@ List:
 * [https://gist.github.com/piscisaureus/3342247 checkout PR branch]
 * clone wiki <code>git clone git@github.com:<USER_NAME>/<REPO_NAME>.wiki.git</code>
 
+= Repositories naming convention =
+As [https://en.wikipedia.org/wiki/Letter_case#Special_case_styles <code>kebab-case</code>] is used for web (URL, HTML and CSS class and ids), let's use this, as github projects are referenced to by URLs.
+
 = Create repo =
 Use these settings if collaborating:
 * disable push on master
