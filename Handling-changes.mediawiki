@@ -1,3 +1,6 @@
+= =
+[https://blog.developer.atlassian.com/force-with-lease/ force considered harmful]
+
 = Common scenarios =
 
 == Overwrite local changes (with remote changes) ==
