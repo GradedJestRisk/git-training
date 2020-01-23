@@ -14,7 +14,27 @@ Use these settings if collaborating:
 * disable push on master
 * require PR
 
-= Security =
+= Authentication =
+
+== RSA ==
+Always use RSA instead of https
+
+=== Generate RSA ===
+[https://github.com/GradedJestRisk/linux-training/wiki/SSH#generation-ssh-keygen Here for linux]
+
+==== Register public key in github ====
+
+Steps:
+* User - Settings / SSH and GPG Keys - New SSH key
+* Add title : Desktop/Laptop + Work/Home 
+* Paste PUBLIC key (ieg. id_rsa.pub) in key field
+
+Test:
+* <code>ssh -T git@github.com</code>, you should get <code> Hi <USERNAME> ! You've successfully authenticated </code>
+
+==== Store passphrase ====
+
+== GPG ==
 [https://security.stackexchange.com/questions/120706/why-would-i-sign-my-git-commits-with-a-gpg-key-when-i-already-use-an-ssh-key-to From SO]
 <blockquote>
 When you authenticate to Github with your SSH key, that authentication doesn't become part of the repository in any meaningful or lasting way. It causes Github to give you access for the moment, but it doesn't prove anything to anyone who is not Github.
