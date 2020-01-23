@@ -26,33 +26,3 @@ Set proxy in Git
 <pre> 
 git config –global http.proxy http://<PROXY>:<PROXY-PORT> 
 </pre>
-
-== Authentication ==
-
-=== HTTP ===
-Windows <code> git config --global credential.helper wincred </code>
-
-Save credentials for one month <code> git config --global credential.helper 'cache --timeout=2592000' </code>
-
-=== RSA ===
-
-==== Generate RSA ====
-[https://github.com/GradedJestRisk/linux-training/wiki/SSH#generation-ssh-keygen Here for linux]
-
-==== Add public key to server ====
-
-Server is GitHub
-
-GitHub: User - Settings / SSH and GPG Keys - New SSH key.  <br/>
-Title : Desktop/Laptop + Work/Home  <br/>
-Key : Enter <code> ssh-rsa (..) your_email@example.com </code>  <br/>
-Click <br/> 
-Enter a title to identify this computer  <br/> 
-In the field Key paste all the contents of the file id_rsa.pub. <br/> 
-
-==== Store passphrase ====
-
-==== Windows ====
-https://github.com/sauter-hq/git-guidelines/wiki/Windows-gitbash-save-ssh-passphrase
-
-
