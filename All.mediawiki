@@ -8,6 +8,7 @@ List:
 ** between current and a branch  <code>? </code>
 ** between 2 branches  <code>git diff <BRANCH_1> <BRANCH_2> </code>
 * commit
+** per hunks <code> git add --patch </code>
 ** without test (disable pre-commit hook) <code>git commit --no-verify </code>
 ** change last commit <code>git commit --amend </code>
 * push
@@ -78,6 +79,7 @@ Handful:
 * push changes to stash <code> git stash push </code>
 * list stashed changes <code> git stash list </code>
 * pop changes from stash <code> git stash pop </code>
+* show stash in status: <code>git config --global status.showStash true</code>
 
 Specifics
 * restore specific stashed changes <code> git stash apply <STASH_ID></code>
