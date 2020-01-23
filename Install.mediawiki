@@ -36,16 +36,7 @@ Save credentials for one month <code> git config --global credential.helper 'cac
 === RSA ===
 
 ==== Generate RSA ====
-</pre>
-ssh-keygen -t rsa -C “your_email@example.com” 
-
-Got: The key fingerprint is: SHA256:(..) your_email@example.com&quot;
-</pre>
-
-Get the public key (not private).
-</pre>
-vi ~/.ssh/id_rsa.pub Got: “ssh-rsa (..) your_email@example.com”
-</pre>
+[https://github.com/GradedJestRisk/linux-training/wiki/SSH#generation-ssh-keygen Here for linux]
 
 ==== Add public key to server ====
 
@@ -63,8 +54,4 @@ In the field Key paste all the contents of the file id_rsa.pub. <br/>
 ==== Windows ====
 https://github.com/sauter-hq/git-guidelines/wiki/Windows-gitbash-save-ssh-passphrase
 
-==== Linux ====
-Overview:
-* start (if not working): <code> eval `ssh-agent` </code>
-* list all accessible keys (.ssh) : <code> ssh-add -l </code>
-* add a key : <code> ssh-add </code>
+
