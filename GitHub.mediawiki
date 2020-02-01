@@ -66,3 +66,7 @@ Host github.com-GradedJestRisk
     User git
     IdentitiesOnly yes
 </pre>
+
+== another way ==
+
+package direnv
