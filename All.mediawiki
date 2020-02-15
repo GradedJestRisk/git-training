@@ -250,13 +250,16 @@ Show git location in git-bash <code>where git.exe </code>
 
 == Commit template ==
 
+Some templates
+* [https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html Tim Pope]
+
 Add template
 <pre>
 echo "Feature - Symptom - Cause " > .gitCommitTemplate
 git config --global commit.template .gitCommitTemplate
 </pre>
 
-Save last commit
+Save last commit (?)
 <pre>
 vi .git/hooks/post-commit
 
@@ -265,6 +268,8 @@ printf "`git log -1 --pretty=%s`" > .gitmessage.txt
 
 chmod +x .git/hooks/post-commit
 </pre>
+
+[https://itnext.io/enforcing-commit-templates-8cf3dbfe2510 Prepare commit message & enforce rules]
 
 == Modify pushed commit ==
 
