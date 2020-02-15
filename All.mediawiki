@@ -221,6 +221,10 @@ Config file (.git/config) </br>
 <code> git config --global --unset <PROPERTY> </code>
 
 =Misc=
+
+List:
+* locate local repo : <code> find ~ -name ".git" 2>/dev/null </code>
+
 ==Compare repos==
 Steps:
 * add target    <code> git remote add -f b path/to/repo_b.git </code>
