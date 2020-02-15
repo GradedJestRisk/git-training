@@ -1,0 +1,15 @@
+A summary of [https://blog.octo.com/en/author/leo-jacquemin-lja/ Leo Jacquemin] blog post [https://blog.octo.com/en/seven-shades-of-git/ on git] proper use
+
+Summary:
+* Green branches: all commits should pass the tests
+* Commit metadata: 50 char messages, description body to capture context
+* Commit boundaries: typology, order and atomicity
+* Branch status: always up to date with the development branch
+* Code churn: use interactive rebasing to eliminate the churn before sharing
+* More rebasing: useful tips during interactive rebases
+* Unresolved: code review commits 
+
+
+Check:
+* green branch: always commit with all tests passing
+* commit metadata: setup a template, and use body if needed to provide context of the change's rational
