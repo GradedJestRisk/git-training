@@ -10,9 +10,10 @@ GUI:
 = Setup =
 
 == User profile ==
+Set up these values only if you use a single account. If not, set them a repository level only.
 <pre>
-git config -–global user.name “Firstname Lastname” 
-git config -–global user.email “your_email@example.com”
+git config -–global user.name "Firstname Lastname"
+git config -–global user.email "your_email@example.com"
 </pre>
 
 == Proxy ==
