@@ -3,8 +3,13 @@ Overview
 * create repository <code> git init </code>
 * create alias on a remote (= not in current folder of localhost) repository (named "origin" by convention) <code> git remote add origin <REPO_URL> </code>
 * check <code> git remote -v </code>
+* pull remote: <code> git pull </code>
+* set upstream for current branch:
+**  <code>git branch --set-upstream-to=origin/<REMOTE_BRANCH> <LOCAL_BRANCH></code>
+** eg: <code>git branch --set-upstream-to=origin/master master</code>
 * push to remote repository <code> git push origin master> </code>
 
+If you commited before the first pull, you'll get "refusing to merge unrelated histories" message. Use <code> git push --force </code> to override.
 
 == From network: clone ==
 <code> git clone https://github.com/GradedJestRisk/java-training.git </code>
