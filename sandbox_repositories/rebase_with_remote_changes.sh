@@ -1,7 +1,8 @@
 #!/bin/sh
 set -e
 
-BASE_DIR=/home/topi/Documents/IT/git
+BASE_DIR=~
+cd $BASE_DIR
 # Setup
 
 rm -rf ./git-sandbox-local
