@@ -54,5 +54,6 @@ git commit -a --amend --no-edit
 
 cat timeline.txt 
 echo -n "Feel better, isn't it ?"
-
+echo '_few commits later, a markdown voice say..._' >> timeline.txt
+echo '**No kidding! **' >> timeline.txt
 
