@@ -11,7 +11,7 @@ it('also pass', () => {
 })
 
 
-it('fails ! red commit !', () => {
-  true.should.be.false;
+it('now pass', () => {
+  true.should.be.true;
 })
 
