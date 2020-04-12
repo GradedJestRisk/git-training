@@ -9,3 +9,9 @@ it('pass', () => {
 it('also pass', () => {
   true.should.be.true;
 })
+
+
+it('fails ! red commit !', () => {
+  true.should.be.false;
+})
+
