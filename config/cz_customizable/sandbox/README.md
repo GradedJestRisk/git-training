@@ -1,4 +1,2 @@
-This repository is nested in several directories, and npw is unable to locate de git-cz module.
-https://github.com/zkat/npx/issues/226
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-To make it work, heres's the workaround: move the sandbox folder out of the repo local folder and run git init 

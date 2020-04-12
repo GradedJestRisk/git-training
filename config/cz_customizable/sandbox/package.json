@@ -11,11 +11,12 @@
   "license": "ISC",
   "devDependencies": {
     "commitizen": "^4.0.4",
-    "cz-conventional-changelog": "^3.1.0"
+    "cz-conventional-changelog": "^3.1.0",
+    "cz-customizable": "^6.2.0"
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-customizable"
     }
   }
 }
