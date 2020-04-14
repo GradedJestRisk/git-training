@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+LC_ALL=C
+
+local_branch="$(git rev-parse --abbrev-ref HEAD)"
+#local_branch="feature_add-a-perpetual-token"
+
+valid_branch_regex="^(feature|bugfix|refactor|doc)_([a-z-]+)$"
+
+
+if [[ ! $local_branch =~ $valid_branch_regex ]]
+then
+    echo "commit rejected"
+    exit 1
+fi
+
+echo "commit accepted"
+exit 0
