@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+const isBranchNameValid = function(branchName) {
+
+	const strictMatch = function (pattern) {
+		return '^' + pattern + '$'
+	}
+
+	const changeType = '(feature|bugfix|refactor|doc)';
+	const description = '_([a-z-]+)';
+
+	const stringPattern = strictMatch(changeType + description)
+	const pattern = new RegExp(stringPattern);
+	const branchNameIsValid = pattern.test(branchName);
+
+	console.log('branchName :' + branchName);
+	console.log('Pattern :' + pattern);
+	console.log('Test returned :' + branchNameIsValid);
+
+	return branchNameIsValid;
+};
+
+const branchName = require('child_process').execSync(	'sh get-branch.sh').toString().trim();
+
+const rejectCommit = 1;
+const acceptCommit = 0;
+let exitCode;
+
+if (isBranchNameValid(branchName)){
+	exitCode = acceptCommit;
+} else {
+	exitCode = rejectCommit;
+}
+
+process.exitCode = exitCode;
