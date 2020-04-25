@@ -1,2 +1,6 @@
 Welcome to the git-training wiki!
-
+Useful:
+* show changes: <code>git log --patch (-p)</code>
+* show fetched, but not merged, changes: <code>git log -p HEAD..FETCH_HEAD</code> or <code>git log -p master..origin/master</code>
+* pull is a short-hand for <code>git pull . remotes/origin/master</code>
+* show a commit content <code>git show <HASH></code>

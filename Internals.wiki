@@ -1,0 +1,61 @@
+Bases
+
+Indexation par le contenu (pas des delta)
+
+Un fichier = texte => un hash, basé sur contenu du fichier + un BLOB
+
+Si deux fichiers ont le même hash => contenu identique => stocké une seule fois
+
+Un répertoire = texte (liste fichier + nom) => un hash, basé sur contenu du fichier
+
+Et récursivement jusqu'à la racine du repo
+
+API
+
+Branche
+
+Un commit = un état du repo + une date + une personne + un message + un commit parent 
+
+=> tout ça, c’est du texte
+
+git commit génère ce hash à partir de tout ce texte
+
+Exemple
+
+Une branche = pointeur nommé (texte = master) sur un commit, lui-mêm lié à un commit parent (précédent)
+
+git push réécrit, sur la machine distante, dans sur le pointeur de la branche courante,  le hash
+
+si ce hash n’est pas connu (la plupart du temps), le serveur va demander au client de lui envoyer le contendu de ce hash (qui inclut le hash de la racine et du commit parent, qui, s’ils ne sont pas conues, etc..)
+
+Explorer
+
+/objects
+
+/refs
+
+Delta
+
+Il est possible d’appliquer une même modification  (ex: ajouter un fichier) dans deux contextes différenst (ex: après deux commits différents)
+
+Pour faire cela, git compare l'état (snapshot) avant/après avec un diff, génère un patch, puis applique ce patch dans le nouveau contexte.
+
+
+= Rebase =
+Général
+
+3 actions:
+
+sélectionner une chaîne de commit;
+
+décider où appliquer cette chaîne;
+
+décider comment les appliquer (ordre).
+
+Sélectionner une chaîne (<upstream>)
+
+Sélectionner par différence entre deux branches (en général, la branche courante locale <BRANCH> et distante (/remote/origin/<BRANCH)
+
+Décider où appliquer cette chaîne (<branch>)
+
+Point de greffage, par défaut l’extrémité de la branche courante distante

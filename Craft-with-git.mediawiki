@@ -13,3 +13,43 @@ Summary:
 Check:
 * green branch: always commit with all tests passing
 * commit metadata: setup a template, and use body if needed to provide context of the change's rational
+
+= Boundaries =
+
+List:
+* typology: structural (refactoring, non-business requirement ?), behavioral (add feature, business requirement)
+* order: structural first (make change easy, then ..)
+* atomicity: method + unit test method
+
+Comment refactoring: use Martin Fowler's name
+When renaming a file with high fan-is, use --follow to avoid git handling it as file deletion/creation ( > 50 % change)
+Commit Driven Developmen: write commit first, then code
+
+= Up to date =
+
+<code>git log --oneline master</code> should read like a poem
+
+Level:
+* app: tag v1, v2.. (on origin/master)
+* feature: F1, F2 (on origin/dev)
+* change: C1, C2 (on origin/a-feature)
+
+
+"When multiple commits affect the same group of lines in a row, we increase the code churn."
+
+git fetch -p
+git rebase -i origin/dev
+
+Then, use fixup and reword to get one commit.
+
+You should train on a sandbox before doing interactive rebase
+
+= Rebasing =
+
+Rebase, then check:
+* if wrong: reset <code>git reset --hard origin/<my-branch></code>
+* if success: check no diff <code> git diff <my-branch-after-interactive-rebase> origin/<my-branch> </code>
+
+Diff between your branch and dev (GitHub PR), to ensure it won't get too large
+
+git diff --numstat HEAD $(git log --reverse --boundary --format=%h HEAD ^origin/dev | head -1) | awk '{plus+=$1;minus+=$2} END {print "+"plus" -"minus}'
