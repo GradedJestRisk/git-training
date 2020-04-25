@@ -70,3 +70,10 @@ Host github.com-GradedJestRisk
 == another way ==
 
 package direnv
+= CLI : hub  =
+[https://hub.github.com API]
+
+List:
+* install: <code>snap install hub --classic</code>
+* [https://hub.github.com/#developer tour]
+* [https://hub.github.com/hub.1.html full API]
