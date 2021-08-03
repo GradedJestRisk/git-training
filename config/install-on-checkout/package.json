@@ -1,0 +1,9 @@
+{
+  "name": "install-on-checkout",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "mocha": "^9.0.3"
+  }
+}
