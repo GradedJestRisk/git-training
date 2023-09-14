@@ -284,3 +284,10 @@ git push --force-with-lease
 </pre>
 
 [https://tecadmin.net/delete-commit-history-in-github/ Remove from history  implies remove all history]
+
+
+= Search release for commit= 
+Get commit id: <code>git log --all --grep='<COMMIT MESSAGE>'</code>
+Get release : <code>git tag --contains 0a1e9318253b237a2f0b5e85c1e00c8b1e655777</code>
+
+
