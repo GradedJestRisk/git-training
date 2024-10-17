@@ -14,4 +14,3 @@ it('also pass', () => {
 it('now pass', () => {
   true.should.be.true;
 })
-

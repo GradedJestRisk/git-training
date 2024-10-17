@@ -3,7 +3,7 @@
 
 = Training =
 List:
-* show changes 
+* show changes
 ** since last commit <code>git diff</code>
 ** between current and a branch  <code>? </code>
 ** between 2 branches  <code>git diff <BRANCH_1> <BRANCH_2> </code>
@@ -46,13 +46,13 @@ Values:
 ===== eol =====
 Control how normalization is applied.
 Values:
-* CRLF: 
+* CRLF:
 ** on check-in: force normalization (convert to LF)
 ** on check-out: convert LE to CRLF
 * LF:
 ** on check-in: force normalization (convert to LF)
 ** on check-out: prevent conversion to CRLF (preserve LF)
-* unspecified (!eol): look at the core.eol config 
+* unspecified (!eol): look at the core.eol config
 
 [https://stackoverflow.com/questions/21302670/what-does-eol-in-gitattributes-do More on that]
 
@@ -73,7 +73,7 @@ git checkout tags/version <TAG_NAME> -b <BRANCH_NAME>
 
 
 == stash ==
-Manage uncommited changes when switching branches. 
+Manage uncommited changes when switching branches.
 
 Handful:
 * push changes to stash <code> git stash push </code>
@@ -86,7 +86,7 @@ Specifics
 * clear the stash <code>git stash clear </code>
 
 Stash file section (aka hunks, parts of patches):
-* <code> git stash push --patch (-p)</code> 
+* <code> git stash push --patch (-p)</code>
 
 ==diff==
 Discard end-of-line difference (use it only on Windows) <br/>
@@ -109,7 +109,7 @@ List:
 *** changed many things, change the commit message <code> git commit --amend --no-edit </code>
 ** and already pushed : <code>git push --force origin <BRANCH></code>
 
-== compare == 
+== compare ==
 
 View all modifications on a single file
 <code>git log --follow -- <FILE_NAME></code>
@@ -188,10 +188,10 @@ For single platforms projects, set false.
 (If platform is Windows, Git will store CRLF in repository).
 
 For cross-platforms projects, use LF in repository, so set:
-* Unix: input (or false if you're lucky); 
+* Unix: input (or false if you're lucky);
 * Windows: true.
 
-true: ensure that 
+true: ensure that
 * normalize text files when added
 * files that are already normalized in the repository stay normalized.
 
@@ -199,7 +199,7 @@ If not set, default value is applied: false.
 ==Config==
 ===List===
 Handful:
-* get existing settings file: <code> git config --list --show-origin </code> 
+* get existing settings file: <code> git config --list --show-origin </code>
 * show all config values : <code> git config --list --show-origin </code>
 * show all repository-specific values: <code> git config --local --list </code>
 * show specific config value : <code> git config --get <PROPERTY> </code>
@@ -209,13 +209,13 @@ Command-line
 <pre>
 git config user.name “Joe Bloggs”
 git config user.email “jbloggs@alternativedomain.com”
-</pre> 
+</pre>
 Config file (.git/config) </br>
 <pre>
 [user]
         name  = "Joe Bloggs”
         email = “jbloggs@alternativedomain.com”
-</pre> 
+</pre>
 
 ===Remove===
 <code> git config --global --unset <PROPERTY> </code>
@@ -286,8 +286,6 @@ git push --force-with-lease
 [https://tecadmin.net/delete-commit-history-in-github/ Remove from history  implies remove all history]
 
 
-= Search release for commit= 
+= Search release for commit=
 Get commit id: <code>git log --all --grep='<COMMIT MESSAGE>'</code>
 Get release : <code>git tag --contains 0a1e9318253b237a2f0b5e85c1e00c8b1e655777</code>
-
-

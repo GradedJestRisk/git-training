@@ -15,7 +15,7 @@ module.exports = {
   typePrefix: '[',
   typeSuffix: ']',
   subjectSeparator: ' ',
- 
+
   // Types
   types: [
     { value: 'feat',     name: 'feat:     Change behaviour (expected)' },

@@ -1,4 +1,4 @@
-= General= 
+= General=
 Branches:
 * in production: <code>master</code>
 * under development: <code>develop</code>

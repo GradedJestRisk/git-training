@@ -5,5 +5,3 @@ List:
 * push a new branch: gpsup <code>git push --set-upstream origin $(git_current_branch) </code>
 * push force with lease: gpf <code> git push --force-with-lease</code>
 * : <code> </code>
-
-

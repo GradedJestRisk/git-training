@@ -14,7 +14,7 @@ API
 
 Branche
 
-Un commit = un état du repo + une date + une personne + un message + un commit parent 
+Un commit = un état du repo + une date + une personne + un message + un commit parent
 
 => tout ça, c’est du texte
 

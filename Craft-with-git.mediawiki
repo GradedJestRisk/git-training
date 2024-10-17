@@ -7,7 +7,7 @@ Summary:
 * Branch status: always up to date with the development branch
 * Code churn: use interactive rebasing to eliminate the churn before sharing
 * More rebasing: useful tips during interactive rebases
-* Unresolved: code review commits 
+* Unresolved: code review commits
 
 
 Check:

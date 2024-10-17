@@ -4,14 +4,14 @@ set -e
 
 rm -rf ./git-sandbox
 
-git clone git@github.com:GradedJestRisk/git-sandbox.git 
+git clone git@github.com:GradedJestRisk/git-sandbox.git
 
 cd git-sandbox
 git config user.name "GradedJestRisk"
 git config user.email "graded.jest.risk@gmail.com"
 
 
-# Master 
+# Master
 git checkout master
 touch file.txt
 echo 'D' >> file.txt

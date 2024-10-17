@@ -1,6 +1,6 @@
 = Client =
 Install client:
-* Linux: Git 
+* Linux: Git
 * Windows: GitBash
 
 = GUIs =
@@ -19,11 +19,11 @@ git config -–global user.email "your_email@example.com"
 == Proxy ==
 
 Get proxy using in Chrome (may give you a .pac file instead of name...)
-<pre> 
+<pre>
 chrome://net-internals/#proxy
 </pre>
 
 Set proxy in Git
-<pre> 
-git config –global http.proxy http://<PROXY>:<PROXY-PORT> 
+<pre>
+git config –global http.proxy http://<PROXY>:<PROXY-PORT>
 </pre>

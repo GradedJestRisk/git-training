@@ -26,7 +26,7 @@ Always use RSA instead of https
 
 Steps:
 * User - Settings / SSH and GPG Keys - New SSH key
-* Add title : Desktop/Laptop + Work/Home 
+* Add title : Desktop/Laptop + Work/Home
 * Paste PUBLIC key (ieg. id_rsa.pub) in key field
 
 Test:
@@ -38,7 +38,7 @@ Test:
 [https://security.stackexchange.com/questions/120706/why-would-i-sign-my-git-commits-with-a-gpg-key-when-i-already-use-an-ssh-key-to From SO]
 <blockquote>
 When you authenticate to Github with your SSH key, that authentication doesn't become part of the repository in any meaningful or lasting way. It causes Github to give you access for the moment, but it doesn't prove anything to anyone who is not Github.
-</blockquote> 
+</blockquote>
 
 If additional security is needed, use GPG:
 * setup [https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work GPG] on your machine
